@@ -1,0 +1,77 @@
+@import "tailwindcss";
+
+/* 🌍 Global Layout Settings */
+html,
+body,
+#root {
+  height: 100%;
+  margin: 0;
+  font-family: "Inter", system-ui, sans-serif;
+  scroll-behavior: smooth; /* smooth page scroll */
+}
+
+body {
+  max-width: 100vw;
+  overflow-x: hidden; /* prevent horizontal scroll on small screens */
+  background-color: #f9fafb; /* light neutral background */
+  color: #1e293b; /* slate-800 default text */
+}
+
+/* 🌫️ Custom Card Shadow */
+.card-shadow {
+  box-shadow: 0 6px 22px rgba(2, 6, 23, 0.06);
+}
+
+/* ✨ Fade-in Animation for Modals, Cards, etc. */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.4s ease-out forwards;
+}
+
+/* 🧱 Optional: subtle fade-up for list items or sections */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fadeUp {
+  animation: fadeUp 0.5s ease-out forwards;
+}
+
+@keyframes spin-slow {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spin-slow {
+  animation: spin-slow 2.2s linear infinite;
+}
+
+@keyframes float-card {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-4px); }
+}
+
+.animate-float-card {
+  animation: float-card 6s ease-in-out infinite;
+}
