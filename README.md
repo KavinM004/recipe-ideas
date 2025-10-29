@@ -1,16 +1,159 @@
-# React + Vite
+# 🧁 Recipe Ideas App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern **React-based recipe finder** that allows users to search for recipes by ingredient, view detailed instructions, and explore dishes with beautiful animations and a responsive design.  
+Built using **React.js**, **Tailwind CSS**, and **TheMealDB API**.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Live Demo
+🔗 [Add your deployed link here, e.g., Render / Netlify / Vercel]
 
-## React Compiler
+---
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 🧩 Features
 
-## Expanding the ESLint configuration
+✅ **Search by Ingredient** — Instantly find recipes based on any ingredient (e.g., chicken, rice, egg).  
+✅ **Responsive UI** — Works smoothly on desktop, tablet, and mobile devices.  
+✅ **Animated Cards & Modals** — Built with smooth AOS (Animate On Scroll) transitions.  
+✅ **Recipe Details Modal** — Displays ingredients, instructions, and YouTube video links.  
+✅ **Debounced Search** — Prevents unnecessary API calls while typing.  
+✅ **Custom Loader Animation** — Elegant spinning logo while fetching data.  
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## 🛠️ Tech Stack
+
+| Category | Technology |
+|-----------|-------------|
+| Frontend | React.js (Vite) |
+| Styling | Tailwind CSS |
+| Animations | AOS (Animate On Scroll) |
+| API | TheMealDB Public API |
+| Icons | React Icons |
+| Package Manager | npm or yarn |
+
+---
+
+## 📁 Folder Structure
+
+```
+📦 recipe-ideas-app
+ ┣ 📂 src
+ ┃ ┣ 📂 assets
+ ┃ ┣ 📂 components
+ ┃ ┃ ┣ Header.jsx
+ ┃ ┃ ┣ SearchBar.jsx
+ ┃ ┃ ┣ RecipeList.jsx
+ ┃ ┃ ┣ RecipeCard.jsx
+ ┃ ┃ ┣ RecipeModal.jsx
+ ┃ ┃ ┗ Loader.jsx
+ ┃ ┣ 📂 utils
+ ┃ ┃ ┗ format.js
+ ┃ ┣ App.jsx
+ ┃ ┣ api.js
+ ┃ ┣ index.css
+ ┃ ┗ main.jsx
+ ┣ 📜 package.json
+ ┣ 📜 vite.config.js
+ ┗ 📜 README.md
+```
+
+---
+
+## ⚙️ Installation and Setup
+
+1️⃣ **Clone the repository**
+```bash
+git clone https://github.com/your-username/recipe-ideas-app.git
+```
+
+2️⃣ **Navigate into the project**
+```bash
+cd recipe-ideas-app
+```
+
+3️⃣ **Install dependencies**
+```bash
+npm install
+```
+
+4️⃣ **Run the development server**
+```bash
+npm run dev
+```
+
+5️⃣ **Open in browser**
+```
+http://localhost:5173/
+```
+
+---
+
+## 🌐 API Reference
+
+Data is fetched from **TheMealDB** public API:  
+🔗 [https://www.themealdb.com/api.php](https://www.themealdb.com/api.php)
+
+Endpoints used:
+- Search by Ingredient: `/filter.php?i={ingredient}`
+- Get Meal by ID: `/lookup.php?i={id}`
+
+---
+
+## 💅 Styling and Animations
+
+- **Tailwind CSS** is used for responsive design.  
+- **Custom Animations:**  
+  - `fadeIn`, `fadeUp`, and `float-card` keyframes in `index.css`.  
+- **AOS Library:** Handles scroll-triggered fade/slide effects.
+
+---
+
+## 🧠 Key Files
+
+| File | Purpose |
+|------|----------|
+| `App.jsx` | Main app container; handles state, search, and modal logic |
+| `api.js` | API utility for fetching meals |
+| `RecipeCard.jsx` | Displays individual recipe cards |
+| `RecipeModal.jsx` | Shows detailed recipe info |
+| `Loader.jsx` | Custom animated loading spinner |
+| `format.js` | Extracts ingredients and measures from API data |
+
+---
+
+## 🧾 Deployment
+
+You can deploy the app easily using:
+- **Netlify**
+- **Vercel**
+- **Render (Static Site)**
+
+Build command:
+```bash
+npm run build
+```
+
+Deploy the `/dist` folder generated after build.
+
+---
+
+## 📸 Screenshots
+(Add here if available)
+- 🏠 **Home Page**
+- 🔍 **Search Results**
+- 🍽️ **Recipe Details Modal**
+
+---
+
+## 👨‍💻 Author
+
+**Kavin M**  
+Frontend Developer | React.js & Node.js Enthusiast  
+📧 karthickkavin004@gmail.com  
+📱 +91 63691 55656  
+
+---
+
+## 📜 License
+This project is open-source and available under the **MIT License**.
