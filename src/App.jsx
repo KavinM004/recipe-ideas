@@ -1,6 +1,7 @@
 import React, { useState, useRef } from "react";
 import Header from "./components/Header";
 import SearchBar from "./components/SearchBar";
+import chefSvg from "./assets/chef.svg";
 import RecipeList from "./components/RecipeList";
 import RecipeModal from "./components/RecipeModal";
 import Loader from "./components/Loader";
@@ -12,12 +13,14 @@ export default function App() {
   const [query, setQuery] = useState("");
   const [selectedId, setSelectedId] = useState(null);
   const [error, setError] = useState(null);
+  const [noInput, setNoInput] = useState(false); // ✅ New state for empty search
 
   const searchVersion = useRef(0);
   const debounceTimer = useRef(null);
 
   const handleType = (term) => {
     setQuery(term);
+    setNoInput(false); // hide message when typing
     if (debounceTimer.current) clearTimeout(debounceTimer.current);
 
     debounceTimer.current = setTimeout(() => {
@@ -26,9 +29,18 @@ export default function App() {
   };
 
   async function handleSearch(term) {
+    // ✅ Validation for empty input
+    if (!term.trim()) {
+      setMeals([]);
+      setNoInput(true);
+      setError(null);
+      return;
+    }
+
     const currentVersion = ++searchVersion.current;
     setLoading(true);
     setError(null);
+    setNoInput(false);
 
     try {
       const data = await searchByIngredient(term);
@@ -46,14 +58,40 @@ export default function App() {
   }
 
   return (
-    <div className="min-h-screen flex flex-col">
+    <div className="min-h-screen flex flex-col bg-gray-50">
       <Header />
       <SearchBar onType={handleType} onSearch={handleSearch} initial={query} />
 
-      <main className="flex-1 max-w-7xl mx-auto w-full">
-        {loading && <Loader />} {/* ✅ Loader appears below search bar */}
-        {error && <p className="text-center text-red-500 py-4">{error}</p>}
-        {!loading && !error && (
+      <main className="flex-1 max-w-7xl mx-auto w-full px-4 pt-6">
+        {loading && <Loader />}
+
+        {error && (
+          <p className="text-center text-red-500 py-4 text-lg">{error}</p>
+        )}
+
+        {/* ✅ No input warning */}
+        {noInput && (
+          <p className="text-center text-yellow-600 py-4 text-lg font-medium">
+            Please enter an ingredient first.
+          </p>
+        )}
+
+        {/* Default Chef illustration */}
+        {!loading && !error && !noInput && meals.length === 0 && (
+          <div className="flex flex-col items-center justify-start mt-8">
+            <img
+              src={chefSvg}
+              alt="Chef Illustration"
+              className="w-40 h-40 sm:w-60 sm:h-60 opacity-80 animate-fadeIn"
+            />
+            <p className="mt-4 text-gray-500 text-lg font-medium text-center">
+              Search by ingredient to discover delicious recipes!
+            </p>
+          </div>
+        )}
+
+        {/* Recipe list */}
+        {!loading && !error && meals.length > 0 && (
           <RecipeList meals={meals} onOpen={(id) => setSelectedId(id)} />
         )}
       </main>
