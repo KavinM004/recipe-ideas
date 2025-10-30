@@ -145,7 +145,12 @@ Deployed on CodeSandbox:
 
 ---
 
-## 📸 Screenshots
+🎥 Video Demonstration
+🔗 https://drive.google.com/file/d/1bruEJkqadOuagouMfpV3NBqTI6TIGcdU/view?usp=sharing
+
+
+
+## 📸 Screenshots 
 
 - 🏠 **Home Page**
           ![Recipe App Preview](./src/assets/home.png)
