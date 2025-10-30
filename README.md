@@ -138,6 +138,13 @@ npm run build
 
 Deploy the `/dist` folder generated after build.
 
+## Level 2 – Working Application
+Deployed on CodeSandbox:  
+🔗 [Live Demo](https://r969m9-5173.csb.app/)
+
+## Level 1 – ChatGPT Work
+🔗 [ChatGPT Discussion Link](https://docs.google.com/document/d/1eDJ4FH2bvHzIuHF8jQofJtwOX-I4U_JWtAqHPCn1CkE/edit?usp=sharing)
+
 ---
 
 ## 📸 Screenshots
@@ -156,5 +163,8 @@ Deploy the `/dist` folder generated after build.
 Frontend Developer | React.js & Node.js Enthusiast  
 📧 karthickkavin004@gmail.com  
 📱 +91 63691 55656  
+
+
+
 
 
