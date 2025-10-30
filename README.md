@@ -143,9 +143,11 @@ Deploy the `/dist` folder generated after build.
 ## 📸 Screenshots
 (Add here if available)
 - 🏠 **Home Page**
+          ![Recipe App Preview](./src/assets/home.png)
 - 🔍 **Search Results**
+          ![Recipe App Preview](./src/assets/searchResults.png)
 - 🍽️ **Recipe Details Modal**
-
+          ![Recipe App Preview](./src/assets/recipeModal.png)
 ---
 
 ## 👨‍💻 Author
