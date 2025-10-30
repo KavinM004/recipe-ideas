@@ -125,6 +125,7 @@ Endpoints used:
 ## 🧾 Deployment
 
 🔗 [https://codesandbox.io/p/github/KavinM004/recipe-ideas/main?embed=1&import=true]
+
 You can deploy the app easily using:
 - **Netlify**
 - **Vercel**
