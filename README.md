@@ -6,7 +6,7 @@ Built using **React.js**, **Tailwind CSS**, and **TheMealDB API**.
 ---
 
 ## 🚀 Live Demo 
-🔗 [https://r969m9-5173.csb.app/]
+🔗 https://r969m9-5173.csb.app/
 
 ---
 
@@ -64,7 +64,7 @@ Built using **React.js**, **Tailwind CSS**, and **TheMealDB API**.
 
 1️⃣ **Clone the repository**
 ```bash
-git clone [https://github.com/KavinM004/recipe-ideas.git]
+git clone https://github.com/KavinM004/recipe-ideas.git
 ```
 
 2️⃣ **Navigate into the project**
@@ -92,7 +92,7 @@ http://localhost:5173/
 ## 🌐 API Reference
 
 Data is fetched from **TheMealDB** public API:  
-🔗 [https://www.themealdb.com/api.php]
+🔗 https://www.themealdb.com/api.php
 
 Endpoints used:
 - Search by Ingredient: `/filter.php?i={ingredient}`
@@ -124,7 +124,7 @@ Endpoints used:
 
 ## 🧾 Deployment
 
-🔗 [https://codesandbox.io/p/github/KavinM004/recipe-ideas/main?embed=1&import=true]
+🔗 https://codesandbox.io/p/github/KavinM004/recipe-ideas/main?embed=1&import=true
 
 You can deploy the app easily using:
 - **Netlify**
